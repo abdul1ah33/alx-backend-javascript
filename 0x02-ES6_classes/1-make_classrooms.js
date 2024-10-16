@@ -5,5 +5,12 @@ import ClassRoom from './0-classroom';
  * @returns An array of {@link ClassRoom}s.
  */
 export default function initializeRooms() {
-  return [19, 20, 34].map((si) => new ClassRoom(si));
+  const sizes = [19, 20, 34];
+  const rooms = [];
+  
+  for (let i = 0; i < sizes.length; i++) {
+    rooms.push(new ClassRoom(sizes[i]));
+  }
+
+  return rooms;
 }
