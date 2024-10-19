@@ -26,10 +26,11 @@ export default class HolbertonCourse {
    * Sets the name of this course.
    */
   set name(value) {
-    if (typeof value == 'string') {
+    if (typeof value === 'string') {
       this._name = value;
-    } else
-    throw new TypeError('Name must be a string');
+    } else {
+      throw new TypeError('Name must be a string');
+    }
   }
 
   /**
